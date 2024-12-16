@@ -1,2 +1,6 @@
-# ml-infra-transcription-model
-Transcription Model 
+# ML Infra - Transcription Model
+
+## Infrastructure design for Transcription Model
+
+![architecture diagram](./architecture-diagram.png)
+
