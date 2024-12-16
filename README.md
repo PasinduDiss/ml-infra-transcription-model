@@ -20,8 +20,8 @@ To handle real-time audio transcription with variable load, I have opted to depl
 
 - The separation of the model and service decouples model logic and business logic
 - The separation of business logic and model logic simplifies model deployment process
-- Enables the model to be deployed on suitable hardware without impacting the entire EKS cluster.
-- Deploying the model via Sagemaker model endpoints allows the model to be called by multiple services if necessary catering to multiple business use cases, provided that autoscaling and usage quotas are in place.
+- Enables the model to be deployed on suitable hardware without impacting the entire EKS cluster
+- Deploying the model via Sagemaker model endpoints allows the model to be called by multiple services if necessary, catering to multiple business use cases; provided that autoscaling and usage quotas are in place
 
 ### Design Decisions - Networking and Security:
 
@@ -32,7 +32,7 @@ To address network security concerns, I decided to route all incoming traffic th
 - VPC gateway endpoints ensure that traffic remains within the AWS network.
 - All S3 data is encrypted at rest by default.
 - A VPC enables the placement of EKS worker nodes across multiple availability zones for high availability.
-- EKS allows fine-grained access to external resources by associating a kubernetes service account with an AWS IAM role.
+- EKS allows fine-grained access to external resources by associating a Kubernetes service account with an AWS IAM role.
 - EKS allows governing of access to clusters via IAM, combined with Kubernetes RBAC, for fine-grained access control.
 
 ### Design Decisions - Observability:
